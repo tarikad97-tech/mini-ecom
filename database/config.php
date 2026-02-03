@@ -5,9 +5,9 @@ $username = "root";
 $password = "";
 $database = "mini_ecommerce";
 
-$conn = mysqli_connect($host, $username, $password, $database);
+$db = mysqli_connect($host, $username, $password, $database);
 
-if (!$conn) {
+if (!$db) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
