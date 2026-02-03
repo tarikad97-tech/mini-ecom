@@ -37,7 +37,7 @@
                         <h3>Create Account</h3>
                         <p>Fill in your information to get started</p>
                         
-                        <form>
+                        <form id="">
                             <!-- Name Field -->
                             <div class="mb-3">
                                 <label for="name" class="form-label">Full Name</label>
@@ -49,6 +49,7 @@
                                         type="text" 
                                         class="form-control" 
                                         id="name" 
+                                        name="fullname" 
                                         placeholder="Enter your full name"
                                         required
                                     />
@@ -66,6 +67,7 @@
                                         type="email" 
                                         class="form-control" 
                                         id="email" 
+                                        name="email" 
                                         placeholder="Enter your email"
                                         required
                                     />
@@ -83,6 +85,7 @@
                                         type="password" 
                                         class="form-control" 
                                         id="password" 
+                                        name="password" 
                                         placeholder="Enter your password"
                                         required
                                     />
@@ -100,6 +103,7 @@
                                         type="password" 
                                         class="form-control" 
                                         id="confirmPassword" 
+                                        name="confirmPassword" 
                                         placeholder="Confirm your password"
                                         required
                                     />
