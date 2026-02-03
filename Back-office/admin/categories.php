@@ -2,7 +2,6 @@
 header("Content-Type: application/json");
 include '../../database/config.php';
 
-
 $sql = "SELECT * FROM categories";
 $result = mysqli_query($db, $sql);
  $products = [];
