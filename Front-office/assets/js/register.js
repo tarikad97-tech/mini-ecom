@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 document.getElementById("registerform").addEventListener("submit", function (e) {
+=======
+document.getElementById("registerfrm").addEventListener("submit", function (e) {
+>>>>>>> fe107523e3ffa606ce3c43c4eaab6700ce3544be
   e.preventDefault();
 
   const formData = new FormData(this);
