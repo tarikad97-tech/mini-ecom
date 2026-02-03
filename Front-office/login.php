@@ -37,7 +37,7 @@
                         <h3>Sign In</h3>
                         <p>Enter your credentials to access your account</p>
                         
-                        <form>
+                        <form id="loginfrm">
                             <!-- Email Field -->
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email Address</label>
@@ -49,6 +49,7 @@
                                         type="email" 
                                         class="form-control" 
                                         id="email" 
+                                        name="email"
                                         placeholder="Enter your email"
                                         required
                                     />
@@ -66,6 +67,7 @@
                                         type="password" 
                                         class="form-control" 
                                         id="password" 
+                                        name="password" 
                                         placeholder="Enter your password"
                                         required
                                     />
@@ -104,7 +106,8 @@
                 </div>
             </div>
         </div>
-
+   <!-- script login -->
+    <script src="assets/js/login.js"></script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
