@@ -37,7 +37,7 @@
                         <h3>Create Account</h3>
                         <p>Fill in your information to get started</p>
                         
-                        <form>
+                        <form id="registerfrm">
                             <!-- Name Field -->
                             <div class="mb-3">
                                 <label for="name" class="form-label">Full Name</label>
@@ -49,6 +49,7 @@
                                         type="text" 
                                         class="form-control" 
                                         id="name" 
+                                        name="flname" 
                                         placeholder="Enter your full name"
                                         required
                                     />
@@ -66,6 +67,7 @@
                                         type="email" 
                                         class="form-control" 
                                         id="email" 
+                                        name="email" 
                                         placeholder="Enter your email"
                                         required
                                     />
@@ -83,6 +85,7 @@
                                         type="password" 
                                         class="form-control" 
                                         id="password" 
+                                        name="password" 
                                         placeholder="Enter your password"
                                         required
                                     />
@@ -90,7 +93,7 @@
                             </div>
                             
                             <!-- Confirm Password Field -->
-                            <div class="mb-3">
+                            <!-- <div class="mb-3">
                                 <label for="confirmPassword" class="form-label">Confirm Password</label>
                                 <div class="input-group">
                                     <span class="input-group-text">
@@ -104,7 +107,7 @@
                                         required
                                     />
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <!-- Register Button -->
                             <div class="d-grid mb-3">
@@ -131,7 +134,7 @@
                 </div>
             </div>
         </div>
-
+   <script src="assets/js/register.js"></script>
         <!-- Bootstrap JavaScript Libraries -->
         <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
