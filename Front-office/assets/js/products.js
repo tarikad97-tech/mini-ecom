@@ -7,7 +7,7 @@ fetch("http://localhost/mini_ecommerce/mini-ecom/Back-office/public/allproducts.
             <div class="product-card">
             <div class="image-wrapper">
             <img src="${p.image}" alt="Product Name">
-             <span class="category-label">${p.category_id}</span>
+             <span class="category-label">${p.namecat}</span>
              </div>
               <div class="product-info">
               <h3>${p.name}</h3>
