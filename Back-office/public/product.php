@@ -4,8 +4,11 @@
 session_start();
 require_once '../../database/config.php';
 
-
-$id = $_GET['id'] ?? 0;
+if (!isset($_GET['id'])) {
+header('Location: products.php');
+exit;
+}else {
+$id = (int)$_GET['id'] ;
 
 $sql = "SELECT * FROM products WHERE id = $id";
 $res = mysqli_query($db, $sql);
@@ -15,4 +18,6 @@ if(!$row){
     echo "Product not found";
     exit;
 }
+}
+
 ?>

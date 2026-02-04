@@ -6,6 +6,7 @@ if(!isset($_SESSION['cart'])){
 }
 
 if(isset($_GET['id'])){
+    // id product
     $id = (int)$_GET['id'];
     $_SESSION['cart'][$id] = ($_SESSION['cart'][$id] ?? 0) + 1;
 }
