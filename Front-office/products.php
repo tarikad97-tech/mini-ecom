@@ -4,27 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Gallery | Front-Office</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/products.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <div class="logo">Mini<span>Ecom</span></div>
-        <div class="cart-status">
-            <span class="cart-icon">🛒</span>
-            <span class="badge">0</span>
-        </div>
-    </header>
-
+  
+<?php include 'navbar.php'; ?>
     <main class="container">
         <div class="page-header">
             <h1>Our Collection</h1>
             <p>Explore our high-quality products curated just for you.</p>
         </div>
 
-        <section class="product-grid">
+        <section class="product-grid" id="product-grid">
             
-            <div class="product-card">
+            <!-- <div class="product-card">
                 <div class="image-wrapper">
                     <img src="https://via.placeholder.com/300x250" alt="Product Name">
                     <span class="category-label">Electronics</span>
@@ -37,9 +31,9 @@
                         <button class="add-btn">Add to Cart</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="product-card out-of-stock">
+            <!-- <div class="product-card out-of-stock">
                 <div class="image-wrapper">
                     <img src="https://via.placeholder.com/300x250" alt="Product Name">
                     <span class="category-label">Home</span>
@@ -52,9 +46,9 @@
                         <span class="stock-status">Sold Out</span>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="product-card">
+            <!-- <div class="product-card">
                 <div class="image-wrapper">
                     <img src="https://via.placeholder.com/300x250" alt="Product Name">
                     <span class="category-label">Accessories</span>
@@ -67,189 +61,12 @@
                         <button class="add-btn">Add to Cart</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </section>
     </main>
-<style>
-    /* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif, system-ui;
-}
 
-body {
-    background-color: #f4f7f6;
-    color: #333;
-}
+    <script src="assets/js/products.js"></script>
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem 5%;
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #2d3436;
-}
-
-.logo span {
-    color: #0984e3;
-}
-
-.cart-status {
-    position: relative;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-.badge {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background: #d63031;
-    color: white;
-    font-size: 0.7rem;
-    padding: 2px 6px;
-    border-radius: 50%;
-}
-
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.page-header h1 {
-    font-size: 2.5rem;
-    color: #2d3436;
-}
-
-.page-header p {
-    color: #636e72;
-    margin-top: 10px;
-}
-
-/* Product Grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-/* Product Card */
-.product-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border: 1px solid #eee;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-.image-wrapper {
-    position: relative;
-    height: 220px;
-}
-
-.image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.category-label {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 5px 12px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    border-radius: 20px;
-    color: #0984e3;
-    text-transform: uppercase;
-}
-
-.product-info {
-    padding: 20px;
-}
-
-.product-info h3 {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color: #2d3436;
-}
-
-.description {
-    font-size: 0.9rem;
-    color: #636e72;
-    margin-bottom: 20px;
-    line-height: 1.4;
-}
-
-.price-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.price {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #2d3436;
-}
-
-.add-btn {
-    background: #0984e3;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.add-btn:hover {
-    background: #74b9ff;
-}
-
-/* Out of Stock Styling */
-.out-of-stock {
-    opacity: 0.8;
-}
-
-.out-of-stock .image-wrapper img {
-    filter: grayscale(100%);
-}
-
-.stock-status {
-    color: #d63031;
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-</style>
 </body>
 </html>
